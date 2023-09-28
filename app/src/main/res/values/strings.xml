@@ -2,4 +2,9 @@
     <string name="app_name">ArtGallery</string>
     <string name="home">Home</string>
     <string name="loved">Loved</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="get_started">Get Started</string>
+    <string name="modern_nart">Modern\nArt</string>
+    <string name="study_art">Study art</string>
 </resources>
