@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ArtGallery</string>
+    <string name="home">Home</string>
+    <string name="loved">Loved</string>
 </resources>
