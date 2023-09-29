@@ -7,4 +7,8 @@
     <string name="get_started">Get Started</string>
     <string name="modern_nart">Modern\nArt</string>
     <string name="study_art">Study art</string>
+    <string name="study_contemporary_nart_and_enjoy">Study contemporary\nart and enjoy</string>
+    <string name="popular">Popular</string>
+    <string name="newest">Newest</string>
+    <string name="all">All</string>
 </resources>

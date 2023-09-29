@@ -6,11 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.artgallery.R
-import com.example.artgallery.databinding.FragmentFirstOnBoardingBinding
-import com.example.artgallery.presentation.MainActivity
+import com.example.artgallery.databinding.FragmentHomeBinding
 
-class FirstOnBoardingFragment : Fragment() {
-    private var _binding : FragmentFirstOnBoardingBinding? = null
+class HomeFragment : Fragment() {
+    private var _binding : FragmentHomeBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -18,13 +17,8 @@ class FirstOnBoardingFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentFirstOnBoardingBinding.inflate(inflater, container, false)
+        _binding = FragmentHomeBinding.inflate(inflater, container, false)
 
         return binding.root
-    }
-
-    override fun onResume() {
-        super.onResume()
-        (activity as MainActivity).hideBottomNavigationView()
     }
 }
