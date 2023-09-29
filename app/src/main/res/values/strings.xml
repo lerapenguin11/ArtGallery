@@ -11,4 +11,5 @@
     <string name="popular">Popular</string>
     <string name="newest">Newest</string>
     <string name="all">All</string>
+    <string name="project_detail">Project Detail</string>
 </resources>

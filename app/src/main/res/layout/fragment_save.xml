@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/background"
+    android:paddingBottom="69dp"
     tools:context=".presentation.onboarding.SaveFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
