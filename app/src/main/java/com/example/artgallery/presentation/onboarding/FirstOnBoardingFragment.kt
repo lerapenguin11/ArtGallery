@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import com.example.artgallery.R
 import com.example.artgallery.databinding.FragmentFirstOnBoardingBinding
 import com.example.artgallery.presentation.MainActivity
+import com.example.artgallery.utilits.replaceFragmentMain
 
 class FirstOnBoardingFragment : Fragment() {
     private var _binding : FragmentFirstOnBoardingBinding? = null
@@ -19,6 +20,8 @@ class FirstOnBoardingFragment : Fragment() {
     ): View? {
 
         _binding = FragmentFirstOnBoardingBinding.inflate(inflater, container, false)
+
+        binding.btNext.setOnClickListener { replaceFragmentMain(HomeFragment()) }
 
         return binding.root
     }
