@@ -1,13 +1,13 @@
-package com.example.artgallery.presentation
+package com.example.artgallery.presentation.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.example.artgallery.R
 import com.example.artgallery.databinding.ActivityMainBinding
-import com.example.artgallery.presentation.onboarding.FirstOnBoardingFragment
-import com.example.artgallery.presentation.onboarding.HomeFragment
-import com.example.artgallery.presentation.onboarding.SaveFragment
+import com.example.artgallery.presentation.ui.onboarding.FirstOnBoardingFragment
+import com.example.artgallery.presentation.ui.HomeFragment
+import com.example.artgallery.presentation.ui.SaveFragment
 import com.example.artgallery.utilits.APP_ACTIVITY
 import com.example.artgallery.utilits.replaceFragmentMain
 import com.example.artgallery.utilits.setStatusBarGradiantMain

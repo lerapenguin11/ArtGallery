@@ -1,4 +1,4 @@
-package com.example.artgallery.presentation.adapter
+package com.example.artgallery.presentation.ui.adapter
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
@@ -9,11 +9,12 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.artgallery.R
+import com.example.artgallery.presentation.ui.adapter.listener.PaintingsListener
 import com.example.domain.entities.VolumePicture
 
-class PaintingsAdapter() : RecyclerView.Adapter<PaintingsAdapter.PaintingsViewHolder>(){
+class PaintingsAdapter(private val listener : PaintingsListener) : RecyclerView.Adapter<PaintingsAdapter.PaintingsViewHolder>(){
 
-    private val meditationList = mutableListOf<VolumePicture>()
+    private val pictureList = mutableListOf<VolumePicture>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PaintingsViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_art, parent, false)
@@ -21,21 +22,25 @@ class PaintingsAdapter() : RecyclerView.Adapter<PaintingsAdapter.PaintingsViewHo
         return PaintingsViewHolder(view)
     }
 
-    override fun getItemCount(): Int = meditationList.size
+    override fun getItemCount(): Int = pictureList.size
 
     override fun onBindViewHolder(holder: PaintingsViewHolder, position: Int) {
-        val meditation = meditationList[position]
-        holder.title.setText(meditation.volumeInfo.title)
-        holder.dateCity.setText(meditation.volumeInfo.dateCity)
+        val picture = pictureList[position]
+        holder.title.setText(picture.volumeInfo.title)
+        holder.dateCity.setText(picture.volumeInfo.dateCity)
         Glide.with(holder.itemView)
-            .load(meditation.volumeInfo.icon)
+            .load(picture.volumeInfo.icon)
             .into(holder.icon)
+
+        holder.itemView.setOnClickListener {
+            listener.getPaintings(picture)
+        }
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    fun setItem(medList : List<VolumePicture>){
-        meditationList.clear()
-        meditationList.addAll(medList)
+    fun setItem(picList : List<VolumePicture>){
+        pictureList.clear()
+        pictureList.addAll(picList)
         notifyDataSetChanged()
     }
 

@@ -1,11 +1,9 @@
-package com.example.domain.repositories
+package com.example.data.repositories
 
 import com.example.domain.entities.VolumePicture
 import kotlinx.coroutines.flow.Flow
 
-interface PaintingsRepository {
-
-    suspend fun getPainting(picture : MutableList<VolumePicture>) : MutableList<VolumePicture>
+interface PictureLocalDataSource {
 
     suspend fun getPicture(): Flow<List<VolumePicture>>
 

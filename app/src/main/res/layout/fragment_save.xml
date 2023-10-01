@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/background"
     android:paddingBottom="69dp"
-    tools:context=".presentation.onboarding.SaveFragment">
+    tools:context=".presentation.ui.SaveFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
