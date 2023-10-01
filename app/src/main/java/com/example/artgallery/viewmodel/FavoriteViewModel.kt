@@ -6,30 +6,32 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.artgallery.entities.PictureWithStatus
 import com.example.artgallery.mappers.PictureWithStatusMapper
+import com.example.data.repositories.PictureLocalDataSourceImpl
 import com.example.domain.entities.VolumePicture
-import com.example.domain.usecase.GetPictureUseCase
-import com.example.domain.usecase.PictureDeleteUseCase
-import com.example.domain.usecase.PictureSaveUseCase
+import com.example.domain.usecase.*
 import kotlinx.coroutines.launch
+import java.util.concurrent.Flow
 
 class FavoriteViewModel(
     private val getPictureUseCase: GetPictureUseCase,
     private val pictureSaveUseCase: PictureSaveUseCase,
     private val pictureDeleteUseCase: PictureDeleteUseCase,
-    private val mapper: PictureWithStatusMapper
+    private val mapper: PictureWithStatusMapper,
+    private val isFavoriteUseCase: IsFavoriteUseCase,
+    private val getDeleteByIdUseCase: GetDeleteByIdUseCase
 ) : ViewModel() {
-
-    var list =  listOf<VolumePicture>()
 
     private val _favoriteList = MutableLiveData<List<VolumePicture>>()
     val favoriteList: LiveData<List<VolumePicture>> get() = _favoriteList
+
+    var check: Boolean = false
 
     fun insertFavorite(favorite: PictureWithStatus) = viewModelScope.launch{
         pictureSaveUseCase.invoke(mapper.fromPictureWithStatusToVolume(favorite))
     }
 
-    fun deleteFavorite(favorite: PictureWithStatus) = viewModelScope.launch{
-        pictureDeleteUseCase.invoke(mapper.fromPictureWithStatusToVolume(favorite))
+    fun deleteFavorite(favorite: VolumePicture) = viewModelScope.launch{
+        pictureDeleteUseCase.invoke(favorite)
     }
 
     fun getAllFavorites() {
@@ -38,5 +40,18 @@ class FavoriteViewModel(
                 .collect{favorites ->
                     _favoriteList.value = favorites}
         }
+    }
+
+    fun isFavorite(picId : Int){
+        viewModelScope.launch {
+            isFavoriteUseCase.invoke(picId)
+                .collect{
+                    check = it
+                }
+        }
+    }
+
+    fun deleteById(id : Int) = viewModelScope.launch {
+        getDeleteByIdUseCase.invoke(id = id)
     }
 }

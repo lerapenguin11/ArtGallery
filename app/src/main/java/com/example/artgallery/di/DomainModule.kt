@@ -1,9 +1,6 @@
 package com.example.artgallery.di
 
-import com.example.domain.usecase.GetPaintingsUseCase
-import com.example.domain.usecase.GetPictureUseCase
-import com.example.domain.usecase.PictureDeleteUseCase
-import com.example.domain.usecase.PictureSaveUseCase
+import com.example.domain.usecase.*
 import org.koin.dsl.module
 
 val domainModule = module {
@@ -21,6 +18,10 @@ val domainModule = module {
     ) }
 
     factory<PictureSaveUseCase> { PictureSaveUseCase(
+        pictureRepository = get()
+    ) }
+
+    factory<GetDeleteByIdUseCase> { GetDeleteByIdUseCase(
         pictureRepository = get()
     ) }
 }

@@ -6,7 +6,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.data.entities.PictureEntity
 
-@Database(entities = [PictureEntity::class], version = 1)
+@Database(entities = [PictureEntity::class], version = 4)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun favoriteDao(): FavoriteDao
 
@@ -19,7 +19,7 @@ abstract class AppDatabase : RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     AppDatabase::class.java,
-                    "new_database_1"
+                    "new_database_4"
                 ).build()
                 INSTANCE = instance
                 instance

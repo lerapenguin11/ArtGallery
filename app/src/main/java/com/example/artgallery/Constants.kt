@@ -13,7 +13,7 @@ object Constants {
 
         meditationList.add(med1)
 
-        val med2 = VolumePicture(1, VolumePictureInfo(R.string.all, R.string.app_name, "https://artinvestment.ru/temp/cache/20150515_wool_record.jpg",
+        val med2 = VolumePicture(1, VolumePictureInfo(R.string.get_started, R.string.app_name, "https://artinvestment.ru/temp/cache/20170526_Peter-Doig-rating.jpg",
             R.string.all))
 
         meditationList.add(med2)

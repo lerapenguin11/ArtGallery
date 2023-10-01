@@ -38,9 +38,15 @@ class PictureLocalDataSourceImpl(
         }
     }
 
-    fun isNewsFavorite(idPic: Int): Flow<Boolean> {
+    override suspend fun isFavorite(idPic: Int): Flow<Boolean> {
         return allFavorites.map { favorites ->
-            favorites.any { it.id == it.idPic }
+            favorites.any { it.idPic == it.idPic }
+        }
+    }
+
+    override suspend fun deleteById(id: Int) {
+        withContext(Dispatchers.IO){
+            favDao.deleteById(id = id)
         }
     }
 }

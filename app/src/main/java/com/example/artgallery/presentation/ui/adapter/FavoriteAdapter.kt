@@ -9,9 +9,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.artgallery.R
+import com.example.artgallery.presentation.ui.adapter.listener.FavoriteListener
 import com.example.domain.entities.VolumePicture
 
-class FavoriteAdapter() : RecyclerView.Adapter<FavoriteAdapter.FavoriteViewHolder>(){
+class FavoriteAdapter(private val listener : FavoriteListener) : RecyclerView.Adapter<FavoriteAdapter.FavoriteViewHolder>(){
 
     private val favPictureList = mutableListOf<VolumePicture>()
 
@@ -30,6 +31,10 @@ class FavoriteAdapter() : RecyclerView.Adapter<FavoriteAdapter.FavoriteViewHolde
         Glide.with(holder.itemView)
             .load(picture.volumeInfo.icon)
             .into(holder.icon)
+
+        holder.itemView.setOnClickListener {
+            listener.getFavorite(picture)
+        }
     }
 
     @SuppressLint("NotifyDataSetChanged")

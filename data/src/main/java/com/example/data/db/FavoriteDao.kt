@@ -15,4 +15,7 @@ interface FavoriteDao {
 
     @Delete
     fun deleteFavorite(favorite: PictureEntity)
+
+    @Query("DELETE FROM favorite WHERE idPic = :id")
+    fun deleteById(id: Int)
 }

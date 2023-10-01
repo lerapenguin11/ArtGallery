@@ -1,12 +1,16 @@
 package com.example.artgallery.presentation.ui
 
+import android.app.Dialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import com.example.artgallery.databinding.FragmentHomeBinding
+import android.R
+import android.view.*
+import android.widget.ImageView
+import android.widget.TextView
+import androidx.core.content.ContextCompat
+import com.bumptech.glide.Glide
 import com.example.artgallery.entities.FavoriteStatus
 import com.example.artgallery.entities.PictureWithStatus
 import com.example.artgallery.presentation.ui.adapter.PaintingsAdapter
@@ -48,10 +52,49 @@ class HomeFragment : Fragment(), PaintingsListener {
     }
 
     override fun getPaintings(pic: VolumePicture) {
-        val picture = PictureWithStatus(id = pic.id, title = pic.volumeInfo.title,
-            description = pic.volumeInfo.description, icon = pic.volumeInfo.icon,
-            dateCity = pic.volumeInfo.dateCity, status = FavoriteStatus.FAVORITE)
-        favoriteViewModel.insertFavorite(picture)
+
+        val dialog = Dialog(requireContext(), R.style.Theme_DeviceDefault_Light_NoActionBar_Fullscreen)
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+        dialog.setContentView(com.example.artgallery.R.layout.full_screen_details)
+        dialog.window?.setLayout(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
+        dialog.window?.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
+        dialog.window?.statusBarColor = ContextCompat.getColor(requireContext(), android.R.color.transparent)
+
+        favoriteViewModel.isFavorite(picId = pic.id)
+
+        val icon : ImageView = dialog.findViewById(com.example.artgallery.R.id.ic_picture_details)
+        val title : TextView = dialog.findViewById(com.example.artgallery.R.id.tv_name_picture_details)
+        val description : TextView = dialog.findViewById(com.example.artgallery.R.id.tv_description_details)
+        val btArrow : ImageView = dialog.findViewById(com.example.artgallery.R.id.ic_arrow)
+        val btSave : ImageView = dialog.findViewById(com.example.artgallery.R.id.ic_save)
+
+        when(favoriteViewModel.check){
+            true -> btSave.setImageResource(com.example.artgallery.R.drawable.ic_save_click)
+            false -> btSave.setImageResource(com.example.artgallery.R.drawable.ic_save_not_click)
+        }
+
+        title.setText(pic.volumeInfo.title)
+        description.setText(pic.volumeInfo.description)
+        Glide.with(requireContext())
+            .load(pic.volumeInfo.icon)
+            .into(icon)
+
+        btSave.setOnClickListener {
+            val picture = PictureWithStatus(
+                id = pic.id, title = pic.volumeInfo.title,
+                description = pic.volumeInfo.description, icon = pic.volumeInfo.icon,
+                dateCity = pic.volumeInfo.dateCity, status = FavoriteStatus.FAVORITE
+            )
+            favoriteViewModel.insertFavorite(picture)
+            btSave.setImageResource(com.example.artgallery.R.drawable.ic_save_click)
+            if (favoriteViewModel.check) {
+
+            }
+        }
+
+        btArrow.setOnClickListener { dialog.cancel() }
+
+        dialog.show()
     }
 
 }

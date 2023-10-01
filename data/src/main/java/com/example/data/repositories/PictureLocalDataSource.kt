@@ -10,4 +10,8 @@ interface PictureLocalDataSource {
     suspend fun pictureSave(pic: VolumePicture)
 
     suspend fun pictureDelete(pic: VolumePicture)
+
+    suspend fun isFavorite(idPic: Int): Flow<Boolean>
+
+    suspend fun deleteById(id : Int)
 }

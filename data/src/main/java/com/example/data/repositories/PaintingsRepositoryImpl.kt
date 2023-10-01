@@ -24,4 +24,12 @@ class PaintingsRepositoryImpl(
     override suspend fun pictureDelete(pic: VolumePicture) {
         localDataSource.pictureDelete(pic)
     }
+
+    override suspend fun isFavorite(idPic: Int): Flow<Boolean> {
+        return localDataSource.isFavorite(idPic = idPic)
+    }
+
+    override suspend fun deleteById(id: Int) {
+        localDataSource.deleteById(id = id)
+    }
 }
