@@ -38,6 +38,12 @@ class PaintingsAdapter(private val listener : PaintingsListener) : RecyclerView.
     }
 
     @SuppressLint("NotifyDataSetChanged")
+    fun clearItem(){
+        pictureList.clear()
+        notifyDataSetChanged()
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
     fun setItem(picList : List<VolumePicture>){
         pictureList.clear()
         pictureList.addAll(picList)

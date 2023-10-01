@@ -10,10 +10,28 @@ import kotlinx.coroutines.launch
 class PaintingsViewModel(
     private val getPaintingsUseCase : GetPaintingsUseCase) : ViewModel() {
 
-    fun getResultMeditationVeryGood(): MutableList<VolumePicture> {
+    fun getResultPopular(): MutableList<VolumePicture> {
         var mutableData = mutableListOf<VolumePicture>()
         viewModelScope.launch{
-            mutableData = getPaintingsUseCase.invoke(Constants.getMeditationVeryGoodData())
+            mutableData = getPaintingsUseCase.invoke(Constants.getPopularData())
+        }
+
+        return mutableData
+    }
+
+    fun getResultNewest(): MutableList<VolumePicture> {
+        var mutableData = mutableListOf<VolumePicture>()
+        viewModelScope.launch{
+            mutableData = getPaintingsUseCase.invoke(Constants.getNewestData())
+        }
+
+        return mutableData
+    }
+
+    fun getResultAll(): MutableList<VolumePicture> {
+        var mutableData = mutableListOf<VolumePicture>()
+        viewModelScope.launch{
+            mutableData = getPaintingsUseCase.invoke(Constants.getAllData())
         }
 
         return mutableData

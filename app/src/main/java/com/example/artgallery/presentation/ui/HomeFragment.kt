@@ -9,8 +9,8 @@ import android.R
 import android.view.*
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
-import androidx.lifecycle.Observer
 import com.bumptech.glide.Glide
 import com.example.artgallery.entities.FavoriteStatus
 import com.example.artgallery.entities.PictureWithStatus
@@ -44,7 +44,49 @@ class HomeFragment : Fragment(), PaintingsListener {
         val layoutManager = GridLayoutManager(requireContext(), 2)
         binding.rvHome.layoutManager = layoutManager
         binding.rvHome.adapter = adapter
-        adapter.setItem(paintingsViewModel.getResultMeditationVeryGood())
+        adapter.setItem(paintingsViewModel.getResultPopular())
+
+        binding.btNewest.setOnClickListener {
+            setColor(binding.btPopular, binding.tvPopular,
+                        binding.btNewest, binding.tvNewest,
+                        binding.btAll, binding.tvAll)
+            adapter.clearItem()
+            adapter.setItem(paintingsViewModel.getResultNewest())
+        }
+
+        binding.btAll.setOnClickListener {
+            setColor(binding.btPopular, binding.tvPopular,
+                binding.btAll, binding.tvAll,
+                binding.btNewest, binding.tvNewest)
+            adapter.clearItem()
+            adapter.setItem(paintingsViewModel.getResultAll())
+        }
+
+        binding.btPopular.setOnClickListener {
+            setColor(binding.btAll, binding.tvAll,
+                binding.btPopular, binding.tvPopular,
+                binding.btNewest, binding.tvNewest)
+            adapter.clearItem()
+            adapter.setItem(paintingsViewModel.getResultPopular())
+        }
+    }
+
+    private fun setColor(
+        btPopular: ConstraintLayout,
+        tvPopular: TextView,
+        btNewest: ConstraintLayout,
+        tvNewest: TextView,
+        btAll: ConstraintLayout,
+        tvAll: TextView
+    ) {
+        btPopular.setBackgroundResource(com.example.artgallery.R.drawable.bg_nav_not_click)
+        tvPopular.setTextColor(ContextCompat.getColor(requireContext(), com.example.artgallery.R.color.color2))
+
+        btNewest.setBackgroundResource(com.example.artgallery.R.drawable.bg_nav_click)
+        tvNewest.setTextColor(ContextCompat.getColor(requireContext(), com.example.artgallery.R.color.background))
+
+        btAll.setBackgroundResource(com.example.artgallery.R.drawable.bg_nav_not_click)
+        tvAll.setTextColor(ContextCompat.getColor(requireContext(), com.example.artgallery.R.color.color2))
     }
 
     override fun onResume() {
@@ -93,5 +135,4 @@ class HomeFragment : Fragment(), PaintingsListener {
 
         dialog.show()
     }
-
 }
