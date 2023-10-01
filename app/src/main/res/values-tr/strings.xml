@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">Sanat Galerisi</string>
+    <string name="home">Ev</string>
+    <string name="loved">Sevilen</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Merhaba boş parça</string>
+    <string name="get_started">Başlamak</string>
+    <string name="modern_nart">Modern\nSanat</string>
+    <string name="study_art">Sanat çalışması</string>
+    <string name="study_contemporary_nart_and_enjoy">Çağdaş sanatı inceleyin ve keyfini çıkarın</string>
+    <string name="popular">Popüler</string>
+    <string name="newest">En yeni</string>
+    <string name="all">Tüm</string>
+    <string name="project_detail">Proje Detayı</string>
+
+    <string name="title_popular1">Tavşan</string>
+    <string name="title_popular2">Sanatçının portresi</string>
+    <string name="title_popular3">Soyut resim</string>
+    <string name="title_popular4">Karla kaplı büyük dağlar</string>
+    <string name="title_popular5">Bayrak</string>
+    <string name="title_popular6">Paramparça etmek</string>
+    <string name="title_popular7">İsimsiz</string>
+    <string name="title_popular8">Rosedale</string>
+
+    <string name="desc_popular1">Paslanmaz çelik. 104,1 × 48,3 × 30,5
+3 nüsha + 1 yazarın nüshasından oluşan 2 No\'lu nüsha
+Christie\'nin. 15.05.2019. Lot 15B
+Açık artırma değerlemesi (tahmini): 50-70 milyon dolar
+Çekiç Fiyatı: 80 milyon dolar
+Fiyat: 91.075.000$</string>
+    <string name="desc_popular2">Kanvas, akrilik. 213,5×305
+Christie\'s. 15.11.2018. Lot 9C
+Açık artırma değerlendirmesi (tahmini): istek üzerine
+Satış Fiyatı: $90,312,500</string>
+    <string name="desc_popular3">Kanvas, yağlıboya. 300,5 × 250,5
+Sotheby\'s. 10.02.2015
+Açık artırma değerlemesi (tahmini): 14-20 milyon £
+Fiyat: 30,4 milyon £ (46,3 milyon $)</string>
+    <string name="desc_popular4">Kağıt, mürekkep. 299,5x873
+Poli Müzayede Hong Kong. 4.04.2016
+Açık artırma değerlemesi (tahmini): 19,3 – 25,8 milyon dolar.
+Fiyat: 39.577 milyon dolar.</string>
+    <string name="desc_popular5">Tuval üzerine ipek bayrak, yakıcı. 29,5×44,4
+Sotheby\'s. 11.11.2014. Lot 9
+Açık artırma değerlemesi (tahmini): 15-20 milyon dolar
+Fiyat: 36 milyon dolar</string>
+    <string name="desc_popular6">Tuval üzerine yağlıboya. 182,2 × 170,1
+Christie\'s. 12.11.2014. Lot 30
+Açık artırma değerlemesi (tahmini): 15-20 milyon dolar
+Fiyat: 30,4 milyon dolar</string>
+    <string name="desc_popular7">Alüminyum, emaye. 274,3 × 182,9
+Sotheby\'s. 12.05.2015. Lot 7
+Açık artırma değerlemesi (tahmini): 12-18 milyon dolar
+Fiyat: 29,93 milyon dolar</string>
+    <string name="desc_popular8">Kanvas, yağlıboya. 199,4 × 239,4
+Philips. 18.05.2017
+Açık artırma değerlemesi (tahmini): yaklaşık 25 milyon dolar
+Fiyat: 28,81 milyon dolar</string>
+
+    <string name="date_1">1990</string>
+    <string name="date_2">1991</string>
+    <string name="date_3">1993</string>
+    <string name="date_4">1967</string>
+    <string name="date_5">1986</string>
+    <string name="date_6">1999</string>
+    <string name="date_7">1992</string>
+    <string name="date_8">1994</string>
+
+    <string name="title_newes1">Çamlar Burnu</string>
+    <string name="title_newes2">Arkadaki bıçak</string>
+    <string name="title_newes3">Son Akşam Yemeği</string>
+    <string name="title_newes4">Köprü</string>
+
+    <string name="desc_newes1">Kanvas, emaye boya. 215,5 × 278,1
+Christie\'nin. 15.05.2019. Lot 28B
+Açık artırma değerlemesi (tahmini): 25-35 milyon dolar
+Fiyat: 28.082.500$</string>
+    <string name="desc_newes2">Tuval üzerine akrilik. 234 × 208
+Sotheby\'s. Hong Kong. 06.10.2019. Lot 1142
+Çekiç Fiyatı: 21.674.000 Dolar
+Komisyon dahil fiyat: 24.950.000$</string>
+    <string name="desc_newes3">Kanvas, yağlıboya. 220 × 395
+Sotheby\'s, Hong Kong. 05.10.2013. Lot 48
+Talep üzerine tahmin
+Fiyat: 23,3 milyon dolar</string>
+    <string name="desc_newes4">Branda, yağ, korozyon önleyici boya, metal kelepçeler, kare cıvatalar. 191,7 × 182,8
+Christie\'s. 13.05.2015. Lot 38B
+Açık artırma değerlemesi (tahmini): 10-15 milyon dolar
+Fiyat: 20,6 milyon dolar</string>
+    <string name="get_next">Sonrakini Al</string>
+    <string name="on_the_main_screen_you_can_get_acquainted_with_popular_and_new_paintings_also_add_them_to_the_selected">On the main screen you can get acquainted with popular and new paintings, also add them to the selected</string>
+</resources>

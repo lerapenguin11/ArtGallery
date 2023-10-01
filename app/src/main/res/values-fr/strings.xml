@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">Galerie d\'art</string>
+    <string name="home">Maison</string>
+    <string name="loved">Aimé</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Bonjour fragment vierge</string>
+    <string name="get_started">Commencer</string>
+    <string name="modern_nart">Moderne \ nart</string>
+    <string name="study_art">Étude</string>
+    <string name="study_contemporary_nart_and_enjoy">Étudier contemporain \ nart et profiter</string>
+    <string name="popular">Populaire</string>
+    <string name="newest">Plus récent</string>
+    <string name="all">Tous</string>
+    <string name="project_detail">Détail du projet</string>
+
+    <string name="title_popular1">Lapin</string>
+    <string name="title_popular2">Portrait de l\'artiste</string>
+    <string name="title_popular3">Peinture abstraite</string>
+    <string name="title_popular4">Grands montagnes enneigées</string>
+    <string name="title_popular5">Drapeau</string>
+    <string name="title_popular6">Fracasser</string>
+    <string name="title_popular7">Sans titre</string>
+    <string name="title_popular8">Rosedale</string>
+
+    <string name="desc_popular1">Stainless steel. 104.1 × 48,3 × 30,5
+Copy No. 2 from the circulation of 3 copies + 1 author\'s copy
+Christie\'s. 15.05.2019. Lot 15B
+Auction valuation (estimate): $50-70 million
+Hammer Price: $80 million
+Price: $91,075,000</string>
+    <string name="desc_popular2">Canvas, acrylic. 213,5 × 305
+Christie’s. 15.11.2018. Lot 9C
+Auction evaluation (estimate): on request
+Sale Price: $90,312,500</string>
+    <string name="desc_popular3">Canvas, oil. 300,5 × 250,5
+Sotheby’s. 10.02.2015
+Auction valuation (estimate): £14-20 million
+Price: £30.4 million ($46.3 million)</string>
+    <string name="desc_popular4">Paper, ink. 299,5 x 873
+Poly Auction Hong Kong. 4.04.2016
+Auction valuation (estimate): $19.3 – $25.8 million.
+Price: $39.577 million.</string>
+    <string name="desc_popular5">Silk flag on canvas, encaustic. 29,5 × 44,4
+Sotheby\'s. 11.11.2014. Lot 9
+Auction valuation (estimate): $15-20 million
+Price: $36 million</string>
+    <string name="desc_popular6">Oil on canvas. 182.2 × 170.1
+Christie’s. 12.11.2014. Lot 30
+Auction valuation (estimate): $15-20 million
+Price: $30.4 million</string>
+    <string name="desc_popular7">Aluminum, enamel. 274,3 × 182,9
+Sotheby\'s. 12.05.2015. Lot 7
+Auction valuation (estimate): $12-18 million
+Price: $29.93 million</string>
+    <string name="desc_popular8">Canvas, oil. 199,4 × 239,4
+Philips. 18.05.2017
+Auction valuation (estimate): about $25 million
+Price: $28.81 million</string>
+
+    <string name="date_1">1990</string>
+    <string name="date_2">1991</string>
+    <string name="date_3">1993</string>
+    <string name="date_4">1967</string>
+    <string name="date_5">1986</string>
+    <string name="date_6">1999</string>
+    <string name="date_7">1992</string>
+    <string name="date_8">1994</string>
+
+    <string name="title_newes1">Cap de pins</string>
+    <string name="title_newes2">Couteau derrière le dos</string>
+    <string name="title_newes3">Le dernier souper</string>
+    <string name="title_newes4">Pont</string>
+
+    <string name="desc_newes1">Canvas, enamel paint. 215,5 × 278,1
+Christie\’s. 15.05.2019. Lot 28B
+Auction valuation (estimate): $25-35 million
+Price: $28,082,500</string>
+    <string name="desc_newes2">Acrylic on canvas. 234 × 208
+Sotheby’s. Hong Kong. 06.10.2019. Lot 1142
+Hammer Price: $21,674,000
+Price with commission: $24,950,000</string>
+    <string name="desc_newes3">Canvas, oil. 220 × 395
+Sotheby\'s, Hong Kong. 05.10.2013. Lot 48
+Estimate on request
+Price: $23.3 million</string>
+    <string name="desc_newes4">Canvas, oil, anti-corrosion paint, metal clamps, square bolts. 191,7 × 182,8
+Christie’s. 13.05.2015. Lot 38B
+Auction valuation (estimate): $10-15 million
+Price: $20.6 million</string>
+    <string name="get_next">Se promener</string>
+    <string name="on_the_main_screen_you_can_get_acquainted_with_popular_and_new_paintings_also_add_them_to_the_selected">Sur l\'écran principal, vous pouvez vous familiariser avec les peintures populaires et nouvelles, les ajouter également au sélectionné</string>
+</resources>

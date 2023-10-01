@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">Galeria de Arte</string>
+    <string name="home">Lar</string>
+    <string name="loved">Amado</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Olá fragmento em branco</string>
+    <string name="get_started">Iniciar</string>
+    <string name="modern_nart">Arte Moderna\n</string>
+    <string name="study_art">Arte de estudo</string>
+    <string name="study_contemporary_nart_and_enjoy">Estude\narte contemporânea e divirta-se</string>
+    <string name="popular">Popular</string>
+    <string name="newest">O mais novo</string>
+    <string name="all">Todos</string>
+    <string name="project_detail">Detalhe do Projeto</string>
+
+    <string name="title_popular1">Coelho</string>
+    <string name="title_popular2">Retrato do artista</string>
+    <string name="title_popular3">Pintura abstrata</string>
+    <string name="title_popular4">Grandes montanhas cobertas de neve</string>
+    <string name="title_popular5">Bandeira</string>
+    <string name="title_popular6">Esmagar</string>
+    <string name="title_popular7">Sem título</string>
+    <string name="title_popular8">Rosedale</string>
+
+    <string name="desc_popular1">Aço inoxidável. 104,1 × 48,3 × 30,5
+Exemplar nº 2 da tiragem de 3 exemplares + 1 exemplar do autor
+Christie\'s. 15.05.2019. Lote 15B
+Avaliação do leilão (estimativa): US$ 50-70 milhões
+Preço do martelo: US$ 80 milhões
+Preço: $ 91.075.000</string>
+    <string name="desc_popular2">Lona, acrílico. 213,5 × 305
+Christie\'s. 15.11.2018. Lote 9C
+Avaliação do leilão (estimativa): sob consulta
+Preço de venda: $ 90.312.500</string>
+    <string name="desc_popular3">Lona, óleo. 300,5 × 250,5
+Sotheby\'s. 10.02.2015
+Avaliação do leilão (estimativa): £ 14-20 milhões
+Preço: £ 30,4 milhões (US$ 46,3 milhões)</string>
+    <string name="desc_popular4">Papel, tinta. 299,5x873
+Leilão Poly Hong Kong. 4.04.2016
+Avaliação do leilão (estimativa): US$ 19,3 – US$ 25,8 milhões.
+Preço: US$ 39,577 milhões.</string>
+    <string name="desc_popular5">Bandeira de seda sobre tela, encáustica. 29,5 × 44,4
+Sotheby\'s. 11.11.2014. Lote 9
+Avaliação do leilão (estimativa): US$ 15-20 milhões
+Preço: US$ 36 milhões</string>
+    <string name="desc_popular6">Óleo sobre tela. 182,2 × 170,1
+Christie\'s. 12.11.2014. Lote 30
+Avaliação do leilão (estimativa): US$ 15-20 milhões
+Preço: US$ 30,4 milhões</string>
+    <string name="desc_popular7">Alumínio, esmalte. 274,3 × 182,9
+Sotheby\'s. 12.05.2015. Lote 7
+Avaliação do leilão (estimativa): US$ 12-18 milhões
+Preço: US$ 29,93 milhões</string>
+    <string name="desc_popular8">Lona, óleo. 199,4 × 239,4
+Philips. 18.05.2017
+Avaliação do leilão (estimativa): cerca de US$ 25 milhões
+Preço: US$ 28,81 milhões</string>
+
+    <string name="date_1">1990</string>
+    <string name="date_2">1991</string>
+    <string name="date_3">1993</string>
+    <string name="date_4">1967</string>
+    <string name="date_5">1986</string>
+    <string name="date_6">1999</string>
+    <string name="date_7">1992</string>
+    <string name="date_8">1994</string>
+
+    <string name="title_newes1">Cabo dos Pinheiros</string>
+    <string name="title_newes2">Faca nas costas</string>
+    <string name="title_newes3">A última Ceia</string>
+    <string name="title_newes4">Ponte</string>
+
+    <string name="desc_newes1">Tela, tinta esmalte. 215,5 × 278,1
+Christie\'s. 15.05.2019. Lote 28B
+Avaliação do leilão (estimativa): US$ 25-35 milhões
+Preço: $ 28.082.500</string>
+    <string name="desc_newes2">Acrílica sobre tela. 234 × 208
+Sotheby\'s. Hong Kong. 06.10.2019. Lote 1142
+Preço do martelo: $ 21.674.000
+Preço com comissão: $ 24.950.000</string>
+    <string name="desc_newes3">Lona, óleo. 220 × 395
+Sotheby\'s, Hong Kong. 05.10.2013. Lote 48
+Orçamento sob consulta
+Preço: US$ 23,3 milhões</string>
+    <string name="desc_newes4">Lona, óleo, tinta anticorrosiva, braçadeiras metálicas, parafusos quadrados. 191,7 × 182,8
+Christie\'s. 13.05.2015. Lote 38B
+Avaliação do leilão (estimativa): US$ 10-15 milhões
+Preço: US$ 20,6 milhões</string>
+    <string name="get_next">Obtenha o próximo</string>
+    <string name="on_the_main_screen_you_can_get_acquainted_with_popular_and_new_paintings_also_add_them_to_the_selected">Na tela principal você pode conhecer pinturas populares e novas, além de adicioná-las às selecionadas</string>
+</resources>
