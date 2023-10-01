@@ -40,7 +40,7 @@ class PictureLocalDataSourceImpl(
 
     override suspend fun isFavorite(idPic: Int): Flow<Boolean> {
         return allFavorites.map { favorites ->
-            favorites.any { it.idPic == it.idPic }
+            favorites.any { it.id == it.idPic }
         }
     }
 

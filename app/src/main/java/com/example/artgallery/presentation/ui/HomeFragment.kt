@@ -10,6 +10,7 @@ import android.view.*
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.Observer
 import com.bumptech.glide.Glide
 import com.example.artgallery.entities.FavoriteStatus
 import com.example.artgallery.entities.PictureWithStatus
@@ -60,18 +61,12 @@ class HomeFragment : Fragment(), PaintingsListener {
         dialog.window?.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         dialog.window?.statusBarColor = ContextCompat.getColor(requireContext(), android.R.color.transparent)
 
-        favoriteViewModel.isFavorite(picId = pic.id)
-
         val icon : ImageView = dialog.findViewById(com.example.artgallery.R.id.ic_picture_details)
         val title : TextView = dialog.findViewById(com.example.artgallery.R.id.tv_name_picture_details)
         val description : TextView = dialog.findViewById(com.example.artgallery.R.id.tv_description_details)
         val btArrow : ImageView = dialog.findViewById(com.example.artgallery.R.id.ic_arrow)
         val btSave : ImageView = dialog.findViewById(com.example.artgallery.R.id.ic_save)
 
-        when(favoriteViewModel.check){
-            true -> btSave.setImageResource(com.example.artgallery.R.drawable.ic_save_click)
-            false -> btSave.setImageResource(com.example.artgallery.R.drawable.ic_save_not_click)
-        }
 
         title.setText(pic.volumeInfo.title)
         description.setText(pic.volumeInfo.description)
@@ -79,16 +74,18 @@ class HomeFragment : Fragment(), PaintingsListener {
             .load(pic.volumeInfo.icon)
             .into(icon)
 
+        favoriteViewModel.getAllFavorites()
+        favoriteViewModel.isFavorite(picId = pic.id)
         btSave.setOnClickListener {
-            val picture = PictureWithStatus(
-                id = pic.id, title = pic.volumeInfo.title,
-                description = pic.volumeInfo.description, icon = pic.volumeInfo.icon,
-                dateCity = pic.volumeInfo.dateCity, status = FavoriteStatus.FAVORITE
-            )
-            favoriteViewModel.insertFavorite(picture)
-            btSave.setImageResource(com.example.artgallery.R.drawable.ic_save_click)
-            if (favoriteViewModel.check) {
-
+            if (favoriteViewModel.isLoading.value!! == false){
+                val picture = PictureWithStatus(
+                    id = pic.id, title = pic.volumeInfo.title,
+                    description = pic.volumeInfo.description, icon = pic.volumeInfo.icon,
+                    dateCity = pic.volumeInfo.dateCity, status = FavoriteStatus.FAVORITE
+                )
+                favoriteViewModel.insertFavorite(picture)
+                favoriteViewModel.getAllFavorites()
+                btSave.setImageResource(com.example.artgallery.R.drawable.ic_save_click)
             }
         }
 

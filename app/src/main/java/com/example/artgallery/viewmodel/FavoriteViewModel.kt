@@ -6,11 +6,9 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.artgallery.entities.PictureWithStatus
 import com.example.artgallery.mappers.PictureWithStatusMapper
-import com.example.data.repositories.PictureLocalDataSourceImpl
 import com.example.domain.entities.VolumePicture
 import com.example.domain.usecase.*
 import kotlinx.coroutines.launch
-import java.util.concurrent.Flow
 
 class FavoriteViewModel(
     private val getPictureUseCase: GetPictureUseCase,
@@ -24,7 +22,7 @@ class FavoriteViewModel(
     private val _favoriteList = MutableLiveData<List<VolumePicture>>()
     val favoriteList: LiveData<List<VolumePicture>> get() = _favoriteList
 
-    var check: Boolean = false
+    val isLoading = MutableLiveData<Boolean>()
 
     fun insertFavorite(favorite: PictureWithStatus) = viewModelScope.launch{
         pictureSaveUseCase.invoke(mapper.fromPictureWithStatusToVolume(favorite))
@@ -46,7 +44,7 @@ class FavoriteViewModel(
         viewModelScope.launch {
             isFavoriteUseCase.invoke(picId)
                 .collect{
-                    check = it
+                    isLoading.value = it
                 }
         }
     }

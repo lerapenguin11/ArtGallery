@@ -12,8 +12,6 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
 import com.bumptech.glide.Glide
 import com.example.artgallery.databinding.FragmentSaveBinding
-import com.example.artgallery.entities.FavoriteStatus
-import com.example.artgallery.entities.PictureWithStatus
 import com.example.artgallery.presentation.ui.adapter.FavoriteAdapter
 import com.example.artgallery.presentation.ui.adapter.listener.FavoriteListener
 import com.example.artgallery.viewmodel.FavoriteViewModel
@@ -68,6 +66,7 @@ class SaveFragment : Fragment(), FavoriteListener {
         val description : TextView = dialog.findViewById(com.example.artgallery.R.id.tv_description_details)
         val btArrow : ImageView = dialog.findViewById(com.example.artgallery.R.id.ic_arrow)
         val btSave : ImageView = dialog.findViewById(com.example.artgallery.R.id.ic_save)
+        btSave.setImageResource(com.example.artgallery.R.drawable.ic_save_click)
         title.setText(pic.volumeInfo.title)
         description.setText(pic.volumeInfo.description)
         Glide.with(requireContext())
